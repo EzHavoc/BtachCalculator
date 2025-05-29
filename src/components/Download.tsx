@@ -4,20 +4,39 @@ import { Download, CheckCircle2, AppWindow as Windows, Apple, FileDown } from 'l
 const DownloadSection: React.FC = () => {
   const [downloadStarted, setDownloadStarted] = useState(false);
   
-  const handleDownload = (platform: string) => {
-    setDownloadStarted(true);
-    
-    // In a real implementation, this would trigger the actual download
-    setTimeout(() => {
-      setDownloadStarted(false);
-    }, 3000);
-  };
+ const handleDownload = (platform: string) => {
+  setDownloadStarted(true);
+
+  let downloadUrl = '';
+  switch (platform) {
+    case 'windows':
+      downloadUrl = 'https://drive.google.com/drive/folders/14TJcP3xpiSFWHXfRHdsys0oIh2AeGQds?usp=sharing';
+      break;
+    case 'macos':
+      downloadUrl = 'https://drive.google.com/drive/folders/14TJcP3xpiSFWHXfRHdsys0oIh2AeGQds?usp=sharing';
+      break;
+    case 'linux':
+      downloadUrl = 'https://drive.google.com/drive/folders/14TJcP3xpiSFWHXfRHdsys0oIh2AeGQds?usp=sharing';
+      break;
+    default:
+      return;
+  }
+
+  // Start the file download
+  window.location.href = downloadUrl;
+
+  // Optional: Reset the state after a delay
+  setTimeout(() => {
+    setDownloadStarted(false);
+  }, 3000);
+};
+
   
   return (
     <section id="download" className="py-24 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">
       <div className="container mx-auto px-4 text-center">
         <div className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white mb-4">Download BatchCalc</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white mb-4">Download BatchCalculator</h2>
           <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
             Get started with BatchCalc today. Choose your platform below to download the latest version.
           </p>
