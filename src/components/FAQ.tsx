@@ -76,15 +76,28 @@ const FAQ: React.FC = () => {
           ))}
         </div>
         
-        <div className="mt-12 text-center">
-          <p className="text-slate-600 dark:text-slate-300 mb-4">Still have questions?</p>
-          <a 
-            href="#" 
-            className="inline-flex bg-teal-600 hover:bg-teal-700 text-white font-medium py-2 px-6 rounded-full transition-colors shadow-sm hover:shadow-md"
-          >
-            Contact Support
-          </a>
-        </div>
+<div className="mt-12 text-center">
+  <p className="text-slate-600 dark:text-slate-300 mb-4">Find us here:</p>
+  
+  <div className="w-full max-w-2xl mx-auto rounded-lg overflow-hidden shadow-md">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.9776447765416!2d77.5665551!3d12.9091583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae156310100001%3A0x71be53da4480fbbe!2sDayananda%20Sagar%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1748687573932!5m2!1sen!2sin"
+      width="100%"
+      height="450"
+      style={{ border: 0 }}
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+
+  <p className="text-slate-600 dark:text-slate-300 mt-4">
+    Dayananda Sagar College of Engineering,<br />
+    Shavige Malleshwara Hills, Kumaraswamy Layout,<br />
+    Bengaluru, Karnataka 560078, India
+  </p>
+</div>
+
       </div>
     </section>
   );
