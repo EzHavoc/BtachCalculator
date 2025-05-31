@@ -6,6 +6,7 @@ import Requirements from './components/Requirements';
 import DownloadSection from './components/Download';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
+import Acknowledgment from './components/Acknowledgment'; 
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -48,6 +49,7 @@ function App() {
       <Requirements />
       <DownloadSection />
       <FAQ />
+      <Acknowledgment/>
       <Footer />
     </div>
   );
